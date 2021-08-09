@@ -50,16 +50,23 @@ body {
       flex-wrap: wrap;
       justify-content: space-evenly;
     }
+
     .card {
-      text-align: center;
-      padding: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; /* 5px rounded corners */
     }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
   
-    .plant-avatar{
-      width: 324px; 
-      height: 393px;
-      border: 5px ridge brown;
-    }
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+      
     
     .slogan {
       text-align: center;
@@ -71,15 +78,13 @@ body {
 
   
     #welcome{
-      position:absolute;
-      top:200px;
-      left: 70px;
+      text-align: center;
+      /* top:200px;
+      left: 70px; */
       font-size: 18px;
       font-weight: bold
     }
  
-  
-
   
     #logout{
       position:absolute;
