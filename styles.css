@@ -65,39 +65,55 @@ body {
   }
       
     
-    .slogan {
-      text-align: center;
-      /* width: 0px;*/
-      height: 150px; 
-      /* margin-right: 750px;
-      margin-left: auto; */
-    }
+  .slogan {
+    text-align: center;
+    /* width: 0px;*/
+    height: 150px; 
+    /* margin-right: 750px;
+    margin-left: auto; */
+  }
 
   
-    #welcome{
-      text-align: center;
-      /* top:200px;
-      left: 70px; */
-      font-size: 18px;
-      font-weight: bold
-    }
+  #welcome{
+    text-align: center;
+    /* top:200px;
+    left: 70px; */
+    font-size: 18px;
+    font-weight: bold
+  }
  
   
-    #logout{
-      position:absolute;
-      top:70px;
-      left: 50px;
-      height: 50px;
-      background-color: blanchedalmond;
-    }
+  #logout{
+    position:absolute;
+    top:70px;
+    left: 50px;
+    height: 50px;
+    background-color: blanchedalmond;
+  }
   
-    .sort-menus{
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center
-    }
+  /* .sort-menus{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+  } */
 
-    .signup-form{
-     text-align: center;
+  .signup-form{
+    text-align: center;
+  }
 
-    }
+  #album-title{
+    padding-left: 60px;
+  }
+
+  #genre-title{
+    padding-left: 60px;
+  } 
+
+  #album-list{
+    padding-left: 80px;
+  }
+
+  #genre-list{
+    padding-left: 80px;
+  
+  }
