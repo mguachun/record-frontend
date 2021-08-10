@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3000/albums/";
 const resultsUl = document.getElementById('results');
-// const button = document.getElementById('search-btn');
+// const createAlbumbtn = document.getElementById('album-btn');
 const albumUl = document.getElementById('album-list');
 const genreUl = document.getElementById('genre-list');
 const titleInput = document.getElementById('title');
