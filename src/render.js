@@ -17,16 +17,16 @@ const albumForm = document.getElementById('album-form');
 //     })
 // };
 
-const renderAlbum = (album) => {
-    const albumDiv = document.createElement('div');
-    albumDiv.classList = "album-card";
-    albumDiv.dataset.id = album.id;
+// const renderAlbum = (album) => {
+//     const albumDiv = document.createElement('div');
+//     albumDiv.classList = "album-card";
+//     albumDiv.dataset.id = album.id;
 
-    render(albumDiv, album);
+//     render(albumDiv, album);
 
-    albumList.appendChild(albumDiv);
-    albumList.addEventListener('click', handleAlbumClick);
-};
+//     albumList.appendChild(albumDiv);
+//     albumList.addEventListener('click', handleAlbumClick);
+// };
 
 document.addEventListener("DOMContentLoaded", () => {
     // button.addEventListener('click', searchAlbums);
