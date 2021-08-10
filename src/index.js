@@ -23,36 +23,9 @@
   
   };
 
-
-//retrieve all genres from back end and append to the DOM
-function fetchGenres(){
-    fetch('http://localhost:3000/genres')
-    .then(resp => resp.json())
-    .then(data => {
-        data.forEach(genre => {
-        //   console.log(genre.name)
-        const li = document.createElement('li')
-        li.innerText = genre.name;
-        genreUl.appendChild(li);
-        })
-    })
-}
-//retrieve all albums from back end and append to the DOM
-function fetchAlbums(){
-    fetch('http://localhost:3000/albums')
-    .then(resp => resp.json())
-    .then(data => {
-        data.forEach(album => {
-          const li = document.createElement('li')
-          li.innerText = album.title;
-          albumUl.appendChild(li);
-
-
-        })
-    })
-
-
-}
+    function splitQuery(query){
+      return query.replace(' ', '+');
+    };
 
 
 

@@ -1,9 +1,10 @@
 class Album {
-    constructor({id,title, artist, year}){
+    constructor({id,title, artist, year, genre_id}){
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.year = year;
+        this.genre_id = genre_id;
     };
 
     renderAlbum = (album) => {
