@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000/genres/";
+const baseUrl = "http://localhost:3000/albums/";
 const resultsUl = document.getElementById('results');
 // const button = document.getElementById('search-btn');
 const albumUl = document.getElementById('album-list');
@@ -11,11 +11,11 @@ const albumForm = document.getElementById('album-form');
 
 
 //is this needed if i have an iterator method in fetch request?
-const renderAlbums = (albums) => {
-    albums.forEach(album => {
-        renderAlbums(album);
-    })
-};
+// const renderAlbums = (albums) => {
+//     albums.forEach(album => {
+//         renderAlbums(album);
+//     })
+// };
 
 const renderAlbum = (album) => {
     const albumDiv = document.createElement('div');
@@ -44,7 +44,7 @@ const render = (div, album) => {
   <p class="year"> ${album.year}</p>
   <strong>Genre:</strong>
   <p class="genre"> ${album.genre}</p>
-  <p class="book-btn"><button>Edit</button> <button>Delete</button></p>
+  <p class="book-btn"><button>Delete</button></p>
 `;
 };
 
