@@ -1,4 +1,4 @@
-// Retrieve all genres from back end and append to the DOM
+// Retrieve all genres from backend and append to the DOM
 function fetchGenres(){
     fetch('http://localhost:3000/genres')
     .then(resp => resp.json())
@@ -12,7 +12,7 @@ function fetchGenres(){
     })
 }
 
-// Retrieve all albums from back end and append to the DOM
+// Retrieve all albums from backend and append to the DOM
 function fetchAlbums(){
     fetch('http://localhost:3000/albums')
     .then(resp => resp.json())
@@ -28,6 +28,7 @@ function fetchAlbums(){
 // Create a new album and append it to the DOM
 const postAlbum = () => {
     event.preventDefault();
+
     const formData = {
         title: titleInput.value,
         artist: artistInput.value,
@@ -44,6 +45,7 @@ const postAlbum = () => {
         body: JSON.stringify(formData)
     };
 
+    //method="POST" action="/albums"
     fetch(baseUrl, configObj)
     .then(resp => resp.json())
     .then(book => {
@@ -53,7 +55,7 @@ const postAlbum = () => {
 };
 
 // Delete an album and remove it from the DOM.
-const deleteBook = (id, albumEl) => {
+const deleteAlbum = (id, albumEl) => {
     const configObj = {
       method: 'DELETE',
       headers: {
