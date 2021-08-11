@@ -10,24 +10,6 @@ const genreInput = document.getElementById('genre');
 const albumForm = document.getElementById('album-form');
 
 
-//is this needed if i have an iterator method in fetch request?
-// const renderAlbums = (albums) => {
-//     albums.forEach(album => {
-//         renderAlbums(album);
-//     })
-// };
-
-// const renderAlbum = (album) => {
-//     const albumDiv = document.createElement('div');
-//     albumDiv.classList = "album-card";
-//     albumDiv.dataset.id = album.id;
-
-//     render(albumDiv, album);
-
-//     albumList.appendChild(albumDiv);
-//     albumList.addEventListener('click', handleAlbumClick);
-// };
-
 document.addEventListener("DOMContentLoaded", () => {
     // button.addEventListener('click', searchAlbums);
     fetchGenres()
@@ -35,17 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
  });
 
-const render = (div, album) => {
-    div.innerHTML = `
-    <h1 class="title">${album.title}</h1>
-  <strong>Artist:</strong> 
-  <p class="artist"> ${album.artist}</p>
-  <strong>Year:</strong>
-  <p class="year"> ${album.year}</p>
-  <strong>Genre:</strong>
-  <p class="genre"> ${album.genre}</p>
-  <p class="book-btn"><button>Delete</button></p>
-`;
-};
+
 
 
