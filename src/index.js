@@ -40,9 +40,5 @@
   
 //   };
 
-//     function splitQuery(query){
-//       return query.replace(' ', '+');
-//     };
-
 
 
