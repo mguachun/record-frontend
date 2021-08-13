@@ -4,6 +4,20 @@ class Genre {
         this.name = name;
     }
 
+    // Retrieve all genres from backend and append to the DOM
+     fetchGenres(){
+    fetch('http://localhost:3000/genres')
+    .then(resp => resp.json())
+    .then(data => {
+        data.forEach(genre => {
+        //   console.log(genre.name)
+        const li = document.createElement('li')
+        li.innerText = genre.name;
+        genreUl.appendChild(li);
+        })
+    })
+}
+
     renderGenre() {
         const genreCard = document.createElement('div');
         genreCard.classList.add('album-card');

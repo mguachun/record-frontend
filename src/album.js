@@ -14,68 +14,41 @@ class Album {
         const albumCard = document.createElement('div');
         albumCard.classList.add('album-card');
 
-        const albumName = document.createElement('h1');
-        albumName.innerText = this.title;
+        // const albumName = document.createElement('h1');
+        // albumName.innerText = this.title;
 
-        albumCard.appendChild(albumName);
+
+        const albumInfo = this.renderAlbumInfo();
+        // const genres = this.renderAlbumGenres();
+
+
+        albumCard.appendChild(albumInfo);
+        // albumCard.appendChild(genres); 
         albumList.appendChild(albumCard);
-
-        
     };
 
+    renderAlbumInfo(){
+        const albumData = document.createElement('div');
 
-    // renderAlbum() {
-    //     const li = document.createElement('li');
-    //     const deleteBtn = document.createElement('button');
+        albumData.innerHTML = `
+        <h1>${this.title}</h1>
+        <p>Artist: ${this.artist}</p>
+        // <p>Year Released:${this.year}</p>
+        `;
+        return albumData;
+    };
 
-    //     li.innerText = this.name;
+    // renderAlbumGenres(){
+    //     const genreUl = document.createElement('ul');
+    //     genreUl.classList.add('genres');
 
-    //     deleteBtn.classList.add('delete-btn');
-    //     deleteBtn.innerText = 'x';
-
-    //     deleteBtn.addEventListener('click', () => {
-    //         console.log(this, "I've been clicked!");
+    //     this.genres.forEach(genre => {
+    //         const newGenre = new Genre(genre);
+    //         const li = newGenre.renderGenre();
+    //         genreUl.appendChild(li)
     //     });
 
-    //     li.appendChild(deleteBtn);
-
-    //     return li;
-
-    // };
-    // renderAlbumForm = () => {
-    //     // let addBtnState = event.target.dataset.active;
-    //     // if (addBtnState === 'false') {
-    //         // addBtnState = 'true';
-    //         const albumForm = document.createElement('form');
-    //         albumForm.classList.add('album-form');
-
-    //         albumForm.innerHTML = `
-    //         <input type="text" placeholder="Album Title" />
-    //         <input type="text" placeholder="Artist" />
-    //         <input type="text" placeholder="Year Released" />
-    //         <button type="submit">Create Album</button>
-    //         `;
-    //         albumForm.addEventListener('submit',() => {
-    //             addBtnState = 'false';
-    //             albumApi.handleSubmit();
-    //         });
-    
-    //     // } else {
-    //     //     return null;
-    
-
-    // };
-
-    // renderAlbumInfo(){
-    //     const albumData = document.createElement('div');
-
-    //     albumData.innerHTML = `
-    //     <h1>${this.title}</h1>
-    //     <p>${this.artist}</p>
-    //     <p>${this.year}</p>
-    //     `;
-
-    //     return albumData;
-
+    //     return genreUl;
+        
     // };
 };
