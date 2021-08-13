@@ -14,7 +14,14 @@
                 <img src="https://fontmeme.com/permalink/210809/e8b50fc79041f887651546225bfee1d2.png" alt="rudelsberg-dieter-steffmann-font" border="0"></a>
         </p>
 
-        <div class="album-form"></div>
+        <form id="album-form">
+            <input type="text" placeholder="Album Title" />
+            <input type="text" placeholder="Artist" />
+            <!-- <input type="text" placeholder="Year Released" /> -->
+            <!-- drop down menu for genre -->
+            <button type="submit"> Create Album </button>
+     
+        </form>
 
 
         <h4 id="album-title">Albums</h4>
@@ -28,26 +35,16 @@
 
         <main>
         </main>
+        <script src="src/albumservices.js"></script> 
+        <script src="src/genreservices.js"></script>
         <script src="src/render.js"></script>
-        <script src="src/api.js"></script>
+        <!-- <script src="src/api.js"></script> -->
         <script src="src/index.js"></script>
         <script src="src/album.js"></script>
         <script src="src/genre.js"></script>
-        <script src="src/albumservices.js"></script> 
-        <script src="src/genreservices.js"></script>
+       
     </body>
-            <!-- <div class="logout-btn">
-            <button id="logout"><img src="http://icons.iconarchive.com/icons/icons8/windows-8/32/User-Interface-Logout-icon.png"></button>
-        </div> -->
+  
         
-        <!-- <div>
-            <form class="signup-form" >
-                <h3> Sign In to Create Your Wishlist!</h3>
-                <input type="text" name="name" value="" placeholder="Please Enter Your Name" class="input-text">
-                <br>
-                <input type="text" name="email" value="" placeholder="Please Enter Your Email Address" class="input-text">
-                <br>
-                <input type="submit" name="submit" value="Sign In" class="submit">
-        </form>
-        </div> -->
+  
 </html>
