@@ -1,4 +1,3 @@
-// const albumApi = new AlbumServices('http://localhost:3000/albums');
 
 class Album {
     constructor({ artist, genre_id, year, genre, title }){
@@ -12,43 +11,54 @@ class Album {
     renderAlbum() {
         const  albumList = document.getElementById('album-list');
         const albumCard = document.createElement('div');
+
         albumCard.classList.add('album-card');
 
-        // const albumName = document.createElement('h1');
-        // albumName.innerText = this.title;
+        const albumName = document.createElement('h1');
+        albumName.innerText = this.title;
 
+        // const albumInfo = this.renderAlbumInfo();
+      
+        // albumCard.appendChild(albumInfo); //renders album info 
+   
 
-        const albumInfo = this.renderAlbumInfo();
-        // const genres = this.renderAlbumGenres();
+        albumCard.appendChild(albumName);
+       albumName.addEventListener('click', ()=>{
+        //    console.log("Clicked!")
+        // this.renderAlbumInfo()
+        albumCard.appendChild(this.renderAlbumInfo());
+    
+        
+       })
 
-
-        albumCard.appendChild(albumInfo);
-        // albumCard.appendChild(genres); 
+       
         albumList.appendChild(albumCard);
+       
+        
     };
 
     renderAlbumInfo(){
+
         const albumData = document.createElement('div');
 
         albumData.innerHTML = `
-        <h1>${this.title}</h1>
         <p>Artist: ${this.artist}</p>
-        // <p>Year Released:${this.year}</p>
+        <p>Year Released:${this.year}</p>
+        <p>Genre: ${this.genre.name}</p>
         `;
         return albumData;
+
+
+
     };
+    // deleteAlbum(id){
+    //     const config = {
+    //         method: 'DELETE'
+    //     }
+    //     fetch(`${this.baseUrl}/${id}`, config)
+    //     .then(resp => resp.json())
+    //     .then(data => console.log(data.message))
 
-    // renderAlbumGenres(){
-    //     const genreUl = document.createElement('ul');
-    //     genreUl.classList.add('genres');
-
-    //     this.genres.forEach(genre => {
-    //         const newGenre = new Genre(genre);
-    //         const li = newGenre.renderGenre();
-    //         genreUl.appendChild(li)
-    //     });
-
-    //     return genreUl;
-        
     // };
+
 };
