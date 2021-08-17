@@ -20,14 +20,28 @@ class Album {
         // const albumInfo = this.renderAlbumInfo();
         // albumCard.appendChild(albumInfo); //renders album info 
    
+        // const addBtn = document.createElement('button');
+        // addBtn.dataset.active = 'false';
+        // addBtn.innerText = "Add an Album";
+        // albumCard.appendChild(addBtn);
+
+        // addBtn.addEventListener('click', () => {
+        //     const form = this.renderAlbumForm();
+        //     if (form) {
+        //         album.appendChild(form);
+        //     };
+        //     // console.log("click!!!")
+        // });
+        
         albumCard.appendChild(albumName);
        albumName.addEventListener('click', ()=>{
         //    console.log("Clicked!")
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
-        
+
        })
         albumList.appendChild(albumCard);
+   
     };
 
     renderAlbumInfo(){
@@ -40,6 +54,57 @@ class Album {
         <p>Genre: ${this.genre.name}</p>
         `;
         return albumData;
+    };
+
+    renderAlbumForm() {
+        let addBtnState = event.target.dataset.active;
+        if (addBtnState === 'false') {
+            addBtnState = 'true';
+            const albumForm = document.createElement('form');
+
+            albumForm.innerHTML = `
+            <input type="text" placeholder="Album Title" />
+            <input type="text" placeholder="Artist" />
+            <input type="text" placeholder="Year Released" />
+            <select name="genres" >
+                  <option value="">Select Genre:</option>
+                  <option>Rock</option>
+                  <option>Jazz</option>
+                  <option>Metal</option>
+                  <option>Country</option>
+                  <option>Hip-Hop</option>
+                  <option>Pop</option>
+                  <option>R&B</option>
+                  <option>Punk</option>
+                  <option>Soul</option>
+                  <option>Disco</option>
+                  <option>Folk</option>
+                </select>
+                <button type="submit"> Create Album </button>
+            `;
+            albumForm.addEventListener('submit', () => {
+                addBtnState = 'false';
+                this.handleSubmit();
+            });
+            return albumForm;
+        } else {
+            return null;
+        };
+    };
+
+    handleSubmit = () => {
+        event.preventDefault();
+        const input = event.target.children[0];
+        const album = {
+            title: input.value,
+            artist: input.value,
+            year: input.value,
+            genre: input.value,
+            genre_id: this.id
+        };
+        input.value = '';
+        albumApi.createAlbum(album);
+        event.target.remove();
     };
 
     
