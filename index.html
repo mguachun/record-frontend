@@ -18,12 +18,11 @@
             <input type="text" placeholder="Album Title" />
             <input type="text" placeholder="Artist" />
             <input type="text" placeholder="Year Released" />
-            <!-- drop down menu for genre -->
-
-            <form action="POST"> 
-                <select name="genres" >
+           
+                <select id="genre-menu"  >
                   <option value="">Select Genre:</option>
-                  <option>Rock</option>
+                  
+                  <!-- <option>Rock</option>
                   <option>Jazz</option>
                   <option>Metal</option>
                   <option>Country</option>
@@ -33,9 +32,9 @@
                   <option>Punk</option>
                   <option>Soul</option>
                   <option>Disco</option>
-                  <option>Folk</option>
+                  <option>Folk</option> -->
                 </select>
-              </form>
+            
  
             <button type="submit"> Create Album </button>
      
@@ -46,9 +45,8 @@
         <ul id="album-list"></ul>
 
 
-        <h4 id ="genre-title">Genres</h4>
-        <ul id="genre-list">
-        </ul>
+        <h4 id="genre-name">Genres</h4>
+        <ul id="genre-list"></ul>
     
 
         <main>
