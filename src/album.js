@@ -9,7 +9,7 @@ class Album {
     };
 
     renderAlbum() {
-        const  albumList = document.getElementById('album-list');
+        const albumList = document.getElementById('album-list');
         const albumCard = document.createElement('div');
 
         albumCard.classList.add('album-card');
@@ -40,10 +40,11 @@ class Album {
         <p>Genre: ${this.genre.name}</p>
         `;
         return albumData;
-
-
-
     };
+
+    
+
+
 
 
     // deleteAlbum(id){
