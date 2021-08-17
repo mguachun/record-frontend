@@ -18,23 +18,16 @@ class Album {
         albumName.innerText = this.title;
 
         // const albumInfo = this.renderAlbumInfo();
-      
         // albumCard.appendChild(albumInfo); //renders album info 
    
-
         albumCard.appendChild(albumName);
        albumName.addEventListener('click', ()=>{
         //    console.log("Clicked!")
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
-    
         
        })
-
-       
         albumList.appendChild(albumCard);
-       
-        
     };
 
     renderAlbumInfo(){
@@ -51,6 +44,8 @@ class Album {
 
 
     };
+
+
     // deleteAlbum(id){
     //     const config = {
     //         method: 'DELETE'
