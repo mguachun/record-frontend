@@ -2,7 +2,6 @@ const albumApi = new AlbumServices('http://localhost:3000/albums')
 
 document.addEventListener('DOMContentLoaded', ()  => {
     albumApi.getAlbums();
-
 });
 
 
