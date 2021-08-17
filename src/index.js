@@ -5,19 +5,11 @@ document.addEventListener('DOMContentLoaded', ()  => {
 });
 
 
+const genreApi = new GenreServices('http://localhost:3000/genres')
 
-//    albumForm.innerHTML = `
-//    <input type="text" placeholder="Album Title" />
-//    <input type="text" placeholder="Artist" />
-//    <input type="text" placeholder="Year Released" />
-//    // <input type="text" placeholder="Genre" />
-//    <button type="submit>Create Album</button>
-//    `;
-//    albumForm.addEventListener('submit',() => {
-//        addBtnState = 'false';
-//        albumApi.handleSubmit();
-//    });
-
+document.addEventListener('DOMContentLoaded', ()  => {
+    genreApi.getGenres();
+});
 
 
 
