@@ -5,22 +5,30 @@ class Genre {
     }
 
     
-    // renderGenre() {
-    //     const li = document.createElement('li');
-    //     const deleteBtn = document.createElement('button');
+    renderGenre() {
+        // debugger
+        const genreSelect = document.getElementById('genre-menu');
+        const genreCard = document.createElement('option');
 
-    //     li.innerText = this.name;
+        genreCard.text = this.name 
+        genreCard.innerHTML= 
+        // this.name = $(input[this.name]);
+        // genreCard.value = this.name
 
-    //     deleteBtn.classList.add('delete-btn');
-    //     deleteBtn.innerText = 'x'
+        // genreCard.options.add(option)
 
-    //     deleteBtn.addEventListener('click', () => {
-    //         console.log(this, "I've been clicked!");
+        // genreCard.classList.add('genre-card');
 
-    //     });
-    //     li.appendChild(deleteBtn);
+        // const genreName = document.createElement('h1');
+        // genreName.innertext = this.name;
 
-    //     return li;
-    // };
+        // genreCard.appendChild(genreName);
+        // genreName.addEventListener('click', ()=>{
+          
+        // })
+        genreSelect.appendChild(genreCard);
+    };
 
+   
+  
 };
