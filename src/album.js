@@ -11,37 +11,27 @@ class Album {
     renderAlbum() {
         const albumList = document.getElementById('album-list');
         const albumCard = document.createElement('div');
-
+        const li = document.createElement('li');
+        const deleteBtn = document.createElement('button');
         albumCard.classList.add('album-card');
 
         const albumName = document.createElement('h1');
         albumName.innerText = this.title;
-
         // const albumInfo = this.renderAlbumInfo();
-        // albumCard.appendChild(albumInfo); //renders album info 
-   
-        // const addBtn = document.createElement('button');
-        // addBtn.dataset.active = 'false';
-        // addBtn.innerText = "Add an Album";
-        // albumCard.appendChild(addBtn);
-
-        // addBtn.addEventListener('click', () => {
-        //     const form = this.renderAlbumForm();
-        //     if (form) {
-        //         album.appendChild(form);
-        //     };
-        //     // console.log("click!!!")
-        // });
+        // albumCard.appendChild(albumInfo); //renders album info
         
         albumCard.appendChild(albumName);
        albumName.addEventListener('click', ()=>{
         //    console.log("Clicked!")
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
+        
 
-       })
+       });
         albumList.appendChild(albumCard);
-   
+      
+
+
     };
 
     renderAlbumInfo(){

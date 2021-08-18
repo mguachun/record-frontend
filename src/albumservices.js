@@ -17,13 +17,13 @@ class AlbumServices {
         })
     };
 
-    // deleteAlbum(id){
-    //     const config = {
-    //         method: 'DELETE'
-    //     }
-    //     fetch(`${this.baseUrl}/${id}`, config)
-    //     .then(resp => resp.json())
-    //     .then(data => console.log(data.message))
+    deleteAlbum(id){
+        const config = {
+            method: 'DELETE'
+        }
+        fetch(`${this.baseUrl}/${id}`, config)
+        .then(resp => resp.json())
+        .then(data => console.log(data.message))
 
-    // };
+    };
 };
