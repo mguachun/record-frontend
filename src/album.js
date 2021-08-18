@@ -1,11 +1,12 @@
 
 class Album {
-    constructor({ artist, genre_id, year, genre, title }){
+    constructor({ artist, genre_id, year, genre, title, id}){
         this.artist = artist;
         this.genre_id = genre_id;
         this.year = year;
         this.genre = genre;
         this.title = title;
+        this.id = id;
     };
 
     renderAlbum() {
@@ -18,10 +19,8 @@ class Album {
         // const albumInfo = this.renderAlbumInfo();
         // albumCard.appendChild(albumInfo); //renders album info
       
-        
         albumCard.appendChild(albumName);
        albumName.addEventListener('click', ()=>{
-        //    console.log("Clicked!")
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
         
@@ -38,7 +37,10 @@ class Album {
         deleteBtn.classList.add('delete-btn');
         deleteBtn.innerText = 'Delete Album';
         deleteBtn.addEventListener('click', () => {
-            albumApi.deleteAlbum(this.));
+            albumData.remove();
+            
+            albumApi.deleteAlbum(this.id);
+         
         });
      
 
@@ -49,8 +51,7 @@ class Album {
         `;
         albumData.appendChild(deleteBtn);
         return albumData;
-
-        
+    
     };
 
     renderAlbumForm() {
@@ -104,19 +105,5 @@ class Album {
         event.target.remove();
     };
 
-    
-
-
-
-
-    // deleteAlbum(id){
-    //     const config = {
-    //         method: 'DELETE'
-    //     }
-    //     fetch(`${this.baseUrl}/${id}`, config)
-    //     .then(resp => resp.json())
-    //     .then(data => console.log(data.message))
-
-    // };
 
 };
