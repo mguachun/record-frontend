@@ -11,14 +11,13 @@ class Album {
     renderAlbum() {
         const albumList = document.getElementById('album-list');
         const albumCard = document.createElement('div');
-        const li = document.createElement('li');
-        const deleteBtn = document.createElement('button');
         albumCard.classList.add('album-card');
 
         const albumName = document.createElement('h1');
         albumName.innerText = this.title;
         // const albumInfo = this.renderAlbumInfo();
         // albumCard.appendChild(albumInfo); //renders album info
+      
         
         albumCard.appendChild(albumName);
        albumName.addEventListener('click', ()=>{
@@ -26,24 +25,32 @@ class Album {
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
         
-
        });
         albumList.appendChild(albumCard);
-      
-
 
     };
 
     renderAlbumInfo(){
 
+        const deleteBtn = document.createElement('button');
         const albumData = document.createElement('div');
+
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.innerText = 'Delete Album';
+        deleteBtn.addEventListener('click', () => {
+            albumApi.deleteAlbum(this.));
+        });
+     
 
         albumData.innerHTML = `
         <p>Artist: ${this.artist}</p>
         <p>Year Released:${this.year}</p>
         <p>Genre: ${this.genre.name}</p>
         `;
+        albumData.appendChild(deleteBtn);
         return albumData;
+
+        
     };
 
     renderAlbumForm() {
