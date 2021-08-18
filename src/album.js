@@ -38,7 +38,7 @@ class Album {
         deleteBtn.innerText = 'Delete Album';
         deleteBtn.addEventListener('click', () => {
             albumData.remove();
-            
+            debugger
             albumApi.deleteAlbum(this.id);
          
         });
