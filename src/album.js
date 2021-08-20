@@ -13,6 +13,7 @@ class Album {
         const albumList = document.getElementById('album-list');
         const albumCard = document.createElement('div');
         albumCard.classList.add('album-card');
+        albumCard.classList.add('div');
 
         const albumName = document.createElement('h1');
         albumName.innerText = this.title;
@@ -33,12 +34,14 @@ class Album {
 
         const deleteBtn = document.createElement('button');
         const albumData = document.createElement('div');
+       const deleteCard = event.target.parentNode.parentNode;
 
         deleteBtn.classList.add('delete-btn');
         deleteBtn.innerText = 'Delete Album';
         deleteBtn.addEventListener('click', () => {
             albumData.remove();
-            debugger
+            // albumData.albumCard.albumInfo();
+           
             albumApi.deleteAlbum(this.id);
          
         });
