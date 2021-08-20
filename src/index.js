@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', ()  => {
     genreApi.getGenres();
 });
 
+// add event listener for adding album
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     albumApi.createAlbum();
+// });
 
 
 
