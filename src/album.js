@@ -34,15 +34,16 @@ class Album {
 
         const deleteBtn = document.createElement('button');
         const albumData = document.createElement('div');
-       const deleteCard = event.target.parentNode.parentNode;
-
+       const deleteCard = event.target.parentElement
+            // debugger
         deleteBtn.classList.add('delete-btn');
         deleteBtn.innerText = 'Delete Album';
         deleteBtn.addEventListener('click', () => {
-            albumData.remove();
-            // albumData.albumCard.albumInfo();
-           
+            // albumData.remove();
+            deleteCard.remove();
+            
             albumApi.deleteAlbum(this.id);
+            
          
         });
      
