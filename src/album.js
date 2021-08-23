@@ -35,7 +35,7 @@ class Album {
         const deleteBtn = document.createElement('button');
         const albumData = document.createElement('div');
        const deleteCard = event.target.parentElement
-            // debugger
+
         deleteBtn.classList.add('delete-btn');
         deleteBtn.innerText = 'Delete Album';
         deleteBtn.addEventListener('click', () => {
@@ -93,21 +93,5 @@ class Album {
             return null;
         };
     };
-
-    handleSubmit = () => {
-        event.preventDefault();
-        const input = event.target.children[0];
-        const album = {
-            title: input.value,
-            artist: input.value,
-            year: input.value,
-            genre: input.value,
-            genre_id: this.id
-        };
-        input.value = '';
-        albumApi.createAlbum(album);
-        event.target.remove();
-    };
-
-
+    
 };
