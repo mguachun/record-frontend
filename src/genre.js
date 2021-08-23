@@ -11,6 +11,10 @@ class Genre {
 
         genreCard.text = this.name 
 
+        genreCard.value = this.id;
+
+
+
     
         genreSelect.appendChild(genreCard);
     };
