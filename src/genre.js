@@ -15,7 +15,5 @@ class Genre {
     
         genreSelect.appendChild(genreCard);
     };
-
    
-  
 };
