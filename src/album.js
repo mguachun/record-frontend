@@ -24,6 +24,7 @@ class Album {
        albumName.addEventListener('click', ()=>{
         // this.renderAlbumInfo()
         albumCard.appendChild(this.renderAlbumInfo());
+    
         
        });
         albumList.appendChild(albumCard);
@@ -43,8 +44,6 @@ class Album {
             deleteCard.remove();
             
             albumApi.deleteAlbum(this.id);
-            
-         
         });
      
 
@@ -56,42 +55,16 @@ class Album {
         albumData.appendChild(deleteBtn);
         return albumData;
     
+
     };
 
-    // renderAlbumForm() {
-    //     let addBtnState = event.target.dataset.active;
-    //     if (addBtnState === 'false') {
-    //         addBtnState = 'true';
-    //         const albumForm = document.createElement('form');
+    toggleAlbumInfo() {
+        const toggle  = document.getElementById(div);
+        const albumCard = document.createElement('div');
 
-    //         albumForm.innerHTML = `
-    //         <input type="text" placeholder="Album Title" />
-    //         <input type="text" placeholder="Artist" />
-    //         <input type="text" placeholder="Year Released" />
-    //         <select name="genres" >
-    //               <option value="">Select Genre:</option>
-    //               <option>Rock</option>
-    //               <option>Jazz</option>
-    //               <option>Metal</option>
-    //               <option>Country</option>
-    //               <option>Hip-Hop</option>
-    //               <option>Pop</option>
-    //               <option>R&B</option>
-    //               <option>Punk</option>
-    //               <option>Soul</option>
-    //               <option>Disco</option>
-    //               <option>Folk</option>
-    //             </select>
-    //             <button type="submit"> Create Album </button>
-    //         `;
-    //         albumForm.addEventListener('submit', () => {
-    //             addBtnState = 'false';
-    //             this.handleSubmit();
-    //         });
-    //         return albumForm;
-    //     } else {
-    //         return null;
-    //     };
-    // };
+        toggle.style.display = ((toggle.style.display!='none') ? 'none' : 'block');
+    }
+
+ 
     
 };
