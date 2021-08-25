@@ -4,6 +4,8 @@ Record Day Wishlist
 
 Record Day Wishlist is a JavaScript/Rails API Single Page Application (SPA), that allows you to add and delete albums to keep track of albums to look for/listen to when record shopping!
 
+backend: https://github.com/mguachun/record_day_wishlist.git
+
 
 * Ruby version:
 ruby '2.6.1'
