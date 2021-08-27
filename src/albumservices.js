@@ -55,7 +55,7 @@ class AlbumServices {
         fetch(this.baseUrl, configObj)
         .then(resp => resp.json())
         .then(album => {
-         
+          
             const newAlbum = new Album(album)
             newAlbum.renderAlbum();
             albumForm.reset();
