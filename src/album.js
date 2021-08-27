@@ -17,22 +17,21 @@ class Album {
 
         const albumName = document.createElement('h1');
         albumName.innerText = this.title;
-        // const albumInfo = this.renderAlbumInfo();
-        // albumCard.appendChild(albumInfo); //renders album info
+
 
       const albumInfo = this.renderAlbumInfo();
       albumInfo.classList.add('toggleInfo');
 
       albumCard.appendChild(albumName);
         albumCard.appendChild(albumInfo);
-        // debugger
+
 
         albumInfo.children[3].addEventListener('click', () => {
-            // console.log('clickedd')
+           
             albumInfo.parentElement.remove();
              albumApi.deleteAlbum(this.id);
         })
-        // albumCard.appendChild(this.renderAlbumInfo());
+     
 
     
         albumName.addEventListener('click', () => {
@@ -45,8 +44,6 @@ class Album {
             console.log("data hidden");
         }
        })
-        // this.renderAlbumInfo()
-        // albumCard.appendChild(this.renderAlbumInfo());
 
         albumList.appendChild(albumCard);
 
@@ -56,23 +53,11 @@ class Album {
 
         const deleteBtn = document.createElement('button');
         const albumData = document.createElement('div');
-        //  albumData.classList.add('toggleInfo');
-        //  albumData.className = "toggleInfo"
-        // debugger
-
-           
-    
-    //    const deleteCard = event.target.parentElement
+     
     
         deleteBtn.classList.add('delete-btn');
         deleteBtn.innerText = 'Delete Album';
 
-        // deleteBtn.addEventListener('click', () => {
-            // albumData.remove();
-            // deleteCard.remove();
-            
-            // albumApi.deleteAlbum(this.id);
-        // });
      
 
         albumData.innerHTML = `

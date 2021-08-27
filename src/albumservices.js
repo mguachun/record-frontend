@@ -34,14 +34,14 @@ class AlbumServices {
         const genreInput = document.getElementById('genre-menu');
 
         event.preventDefault();
-        // debugger
+ 
         const albumData = {
             title: titleInput.value,
             artist: artistInput.value,
             genre_id: genreInput.value,
             year: yearInput.value
         };
-            // debugger
+
         const configObj = {
             method: 'POST',
              headers:{
@@ -55,7 +55,7 @@ class AlbumServices {
         fetch(this.baseUrl, configObj)
         .then(resp => resp.json())
         .then(album => {
-            // renderAlbum(album);
+         
             const newAlbum = new Album(album)
             newAlbum.renderAlbum();
             albumForm.reset();
