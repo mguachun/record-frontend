@@ -32,7 +32,6 @@ class Album {
              albumApi.deleteAlbum(this.id);
         })
      
-
     
         albumName.addEventListener('click', () => {
 
