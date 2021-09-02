@@ -11,10 +11,11 @@ class AlbumServices {
           
             albums.forEach(album => {
                 const newAlbum = new Album(album) 
+                // if (albumName.length > 3) {
                 // albums.push(newAlbum)
                 // console.log(newAlbum)
                 newAlbum.renderAlbum();
-
+            // }
             })
         })
         // return albums
@@ -69,8 +70,9 @@ class AlbumServices {
 
     renderWordSearch() {
         const albumApi = new AlbumServices('http://localhost:3000/albums')
-       const result = albumApi.getAlbums().
-    //    .filter(album => albumName.length > 3);
+    //    const result = albumApi.getAlbums()
+        const result = getAlbum.renderAlbum();
+    //    result.filter(album => albumName.length > 3);
 
         console.log(result);
     
