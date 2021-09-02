@@ -4,17 +4,22 @@ class AlbumServices {
     };
 
     getAlbums(){
+        // let albums = []
         fetch(this.baseUrl)
-        .then(resp => resp.json())
+        .then(resp => resp.json())  
         .then(albums => {
-            console.log(albums)
+          
             albums.forEach(album => {
-                const newAlbum = new Album(album)
+                const newAlbum = new Album(album) 
+                // albums.push(newAlbum)
+                // console.log(newAlbum)
                 newAlbum.renderAlbum();
 
             })
         })
+        // return albums
     };
+    
 
     deleteAlbum(id){
         const config = {
@@ -33,7 +38,7 @@ class AlbumServices {
         const yearInput = document.getElementById('year');
         const genreInput = document.getElementById('genre-menu');
 
-        event.preventDefault();
+        event.preventDefault(); 
  
         const albumData = {
             title: titleInput.value,
@@ -60,6 +65,15 @@ class AlbumServices {
             newAlbum.renderAlbum();
             albumForm.reset();
         });
+    }
+
+    renderWordSearch() {
+        const albumApi = new AlbumServices('http://localhost:3000/albums')
+       const result = albumApi.getAlbums().
+    //    .filter(album => albumName.length > 3);
+
+        console.log(result);
+    
     }
     }
 

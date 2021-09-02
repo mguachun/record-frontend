@@ -15,9 +15,9 @@
         </p>
 
         <form id="album-form">
-            <input type="text" id="title" name="title" placeholder="Album Title" />
-            <input type="text" id="artist" name="artist" placeholder="Artist" />
-            <input type="text" id="year" name="year" placeholder="Year Released" />
+            <input type="text" id="title" name="title" placeholder="Album Title" required />
+            <input type="text" id="artist" name="artist" placeholder="Artist" required />
+            <input type="text" id="year" name="year" placeholder="Year Released" required/>
            
                 <select id="genre-menu" name="genre-menu">
                   <option value="">Select Genre:</option>
@@ -27,6 +27,7 @@
      
         </form>
      
+        <button id="word-button"> Long Word Search </button>
 
         <h4 id="album-title">Albums</h4>
         <ul id="album-list" id="delete-btn"></ul>
