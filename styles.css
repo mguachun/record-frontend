@@ -1,27 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+/* 
 body {
     margin: 0;
-    font-family: monospace;
-    background-color: #19CACA
+    font-family: 'Rubik', sans-serif;
+    background-color: #94d6d6
+  } */
+    
+/* Title Styling:  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin-top: -600px;
+  height: 600vh;
+  width: 100vw;
+  background-color: #03061a;
+  color:#B5DEFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  /* font-size: 25vmin; */
+  /* line-height: 70vmin; */
+}
+
+.gradient-text {
+  color: transparent;
+  background: conic-gradient(
+    #D9D7F1 12%, 
+    #BAABDA 12%, #BAABDA 33%, 
+    #E7FBBE 33%, #E7FBBE 55%, 
+    #FFCBCB 55%, #FFCBCB 70%, 
+    #B5DEFF 70%, #B5DEFF 87%, 
+    #F7D1BA 87%);
+  background-size: 50%;
+  background-clip: text;  
+  -webkit-background-clip: text;
+
+  animation: expand-rev 0.5s ease forwards;
+
+  cursor: pointer;
+  margin: 1rem;
+  float: left;
+  position: fixed;
+  top: 20px;
+}
+
+.gradient-text:hover {
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
   }
-  
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+}
+
+@keyframes expand-rev {
+  0% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
   #app-header {
-      display: flex;
-      justify-content: center;
+      /* display: flex; */
+      float:left;
+      /* justify-content: center; */
       opacity: .8;
       height: 5rem;
       padding-top: 1rem;
     }
 
+    .album-card {
+      cursor: pointer;
+    }
+
   
     button {
+      font-family: 'Rubik', sans-serif;
+      cursor: pointer;
       position: relative;
-      background-color:rgb(9, 101, 107);
-      border: none;
-      border-radius: 5px;
+      background-color:#BAABDA;
+      border: solid 5px #BAABDA;
+      border-radius: 7px;
       height: 3rem;
       width: max-content;
       color: whitesmoke;
-      font-size: 18px;
+      font-size: 15px;
+      justify-self: center;
+    }
+    button:hover {
+      font-family: 'Rubik', sans-serif;
+      cursor: pointer;
+      position: relative;
+      background-color:#E7FBBE;
+      border: solid 5px #E7FBBE;
+      border-radius: 7px;
+      height: 3rem;
+      width: max-content;
+      color: #03061a;
+      font-size: 15px;
       justify-self: center;
     }
   
@@ -48,47 +152,85 @@ body {
       justify-content: space-evenly;
     }
 
-    
-  .slogan {
-    text-align: center;
-    /* width: 0px;*/
-    height: 150px; 
-    /* margin-right: 750px;
-    margin-left: auto; */
+
+  #album-form {
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 1rem;
+    float: left;
+    position: fixed;
+    top: 100px;
+    margin-right: 360px;
+    display: block;
+    background-color: #B5DEFF;
+    border-radius: 15px;
+
   }
 
-  
-  #welcome{
-    text-align: center;
-    /* top:200px;
-    left: 70px; */
-    font-size: 18px;
-    font-weight: bold
+  #search {
+
+    float: left;
+    margin: 1rem;
+    float: left;
+    margin: 1rem;
+    float: left;
+    position: fixed;
+    top: 100px;
+    margin-right: 360px;
+    display: block;
   }
- 
+
+  .form-container {
+    display: flex;
+    margin: 1rem;
+    float: left;
+    text-align: center;
+    justify-content: center;
+  }
+  
+
   .signup-form{
     text-align: center;
   }
 
   #album-title{
-    padding-left: 60px;
+   margin: 1rem;
+   margin-left: -325px;
+    /* display: center; */
   }
 
   #genre-title{
     padding-left: 60px;
   } 
 
-  #album-list{
+  /* #album-list{
     padding-left: 80px;
-  }
+  } */
 
   #genre-list{
-    padding-left: 80px;
+    float: left;
+    margin: 1rem;
+    float: left;
+    margin: 1rem;
+    float: left;
+    position: fixed;
+    top: 100px;
+    margin-right: 360px;
+    display: block;
   
   }
 
   .toggleInfo {
     display: none;
+
   }
 
-  
+ .albumData{
+  border: solid 2px #BAABDA;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 30px;
+
+ }
+
