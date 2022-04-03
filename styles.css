@@ -101,6 +101,10 @@ h1 {
       cursor: pointer;
     }
 
+    .album-card:hover {
+      cursor: pointer;
+      color: #BAABDA;
+    }
   
     button {
       font-family: 'Rubik', sans-serif;
