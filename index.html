@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <title>My Record Wishlist</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 </head>
     <body>
-        <div id="app-header">
-            <img src="https://fontmeme.com/permalink/210809/cdabc331657565d80fe13eb9444ef6f6.png" alt="rudelsberg-dieter-steffmann-font" border="0"></a>
-            
-        </div>
-        <p class="slogan">
-                <img src="https://fontmeme.com/permalink/210809/e8b50fc79041f887651546225bfee1d2.png" alt="rudelsberg-dieter-steffmann-font" border="0"></a>
-        </p>
 
+    <div class="form-container">
         <form id="album-form">
+            <br>
+            <br>
             <input type="text" id="title" name="title" placeholder="Album Title" required />
+            <br>
+            <br>
             <input type="text" id="artist" name="artist" placeholder="Artist" required />
+            <br>
+            <br>
             <input type="text" id="year" name="year" placeholder="Year Released" required/>
+            <br>
+            <br>
            
                 <select id="genre-menu" name="genre-menu">
                   <option value="">Select Genre:</option>
                 </select>
+                <br>
+                <br>
  
-            <button type="submit"> Create Album </button>
+            <button type="submit"> Add Album </button>
      
         </form>
+    </div>
 
-
-        <h4 id="album-title">Albums</h4>
+   
+    <div>
+        <h1 id="album-title"  class="gradient-text">My Record Wishlist</h1>
         <ul id="album-list" id="delete-btn"></ul>
 
 
         <!-- <h4 id="genre-name">Genres</h4> -->
         <ul id="genre-list"></ul>
+        
     
+    </div>
+       
 
         <main>
         </main>
