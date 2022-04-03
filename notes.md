@@ -45,3 +45,30 @@ document.addEventListener('DOMContentLoaded', ()  => {
 
 index.html
    <!-- <button id="word-button"> Long Word Search </button> --> -->
+
+  
+   sort earliest to latest
+
+<!-- const sortedMovies = movieList.sort((a, b) => b.release_date - a.release_date )
+sortedMovies -->
+
+
+// Use the months array from index.js.
+// Write a function that returns only the months ending in the letter 'y'.
+
+
+
+<!-- const months = monthsArray.filter(month => month.slice(-1) === "y")
+console.log(months) -->
+
+filter: 
+<!-- const array = [1, 2, 3, 4]
+const filteredArray = array.filter(element => element%2)
+// array = [1, 2, 3, 4]
+// filteredArray = [1, 3] -->
+
+map: 
+<!-- const array = [1, 2, 3, 4]
+const mapArray = array.map(element => element * 2)
+// array = [1, 2, 3, 4]
+// mapArray = [2, 4, 6, 8] -->
