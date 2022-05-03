@@ -18,7 +18,7 @@ $ bundle install
 Run $ rails db:seed to seed the database and have albums preloaded onto the DOM.
 
 Usage:
-In order to start the server for the application, enter the following line in your terminal:
+In order to start the server for the application, cd into the backend folder and enter the following line in your terminal:
 
 $ rails s
 
@@ -26,7 +26,7 @@ Then, navigate to the "frontend" directory (or simply expand if using a code edi
 
 Interacting with the Application
 
-Once the app is open, you can scroll to browse the albums already included in the database. You have the option to delete any album. 
+Once the app is open, you can scroll to browse the albums already included in the database. You have the option to  view, and delete any album. 
 
-You can also create new albums by filling out the form  where you can input the required information to create the album. After you're done, hit 'Add Album' and your album will be added to the list.
+You can also create new albums by filling out the form where you can input the required information to create the album. After you're done, hit 'Add Album' and your album will be added to the bottom of the list.
 
